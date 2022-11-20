@@ -147,7 +147,7 @@ img {
     color: var(--color-HexachromeBlack);
     text-decoration: none;
 
-    transition: var(--animation);
+    transition: color var(--animation);
 }
 
 .header-nav .header-link{
@@ -164,6 +164,7 @@ img {
 
     background-color: var(--color-darkBlue);
     border-radius: 2px;
+    transform: scaleX(1.1);
 }
 
 .header-link:hover,
@@ -256,7 +257,7 @@ img {
     cursor: pointer; 
     text-align:center;
     border: none;
-    transition: var(--animation);
+    transition: background-color var(--animation), color var(--animation);
 }
 
 
@@ -273,7 +274,7 @@ img {
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     z-index: 1;
-    transition: var(--animation);
+    transition: opacity var(--animation);
 }
 
 .backdrop.is-hidden{
@@ -306,15 +307,21 @@ img {
     margin-bottom: auto;
 
     border-radius: 50%;
-    background: #FFFFFF;
+    background-color: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
 
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: background-color var(--animation);
     }
 
+    .btn-close:hover,
+    .btn-close:focus{
+        background-color: #AFB1B8;
+    }
 
+    
 
     /* position: fixed;
    
@@ -522,26 +529,21 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: var(--animation);
+    transition: color var(--animation), background-color var(--animation) ;
+    color: #AFB1B8;
 }
 
 .team-soc-icon{
-    fill: #AFB1B8;
+    fill: currentColor;
 }
 
 .team-soc-link:hover,
 .team-soc-link:focus{
     background-color: #2196F3;
+    color: var(--color-white);
 }
 
-.team-soc-link:hover
- .team-soc-icon{
-    fill: #FFFFFF;
-}
-.team-soc-link:focus
-.team-soc-icon{
-    fill: #FFFFFF;
-}
+
 
     /*---------------Постійні клієнти----------- */
 
@@ -565,13 +567,15 @@ img {
     justify-content: center;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
-    transition: var(--animation);
+    color: #AFB1B8;
+
+    transition:  border var(--animation), color var(--animation);
 }
 
 
 .client-icon{
-    fill: #AFB1B8;
-    transition: var(--animation);
+    fill: currentColor;
+    transition: color var(--animation);
 }
 
 .client-link:hover,
@@ -674,6 +678,8 @@ img {
     justify-content: center;
     color: #FFFFFF;
     background-color: rgba(255, 255, 255, 0.1);
+
+    transition: color var(--animation), background-color var(--animation);
 }
 .footer-soc-icon {
     fill:currentColor;
@@ -689,11 +695,9 @@ img {
     fill: #FFFFFF;
 }
 
-.footer-logo,
 .footer-card,
-.footer-text,
-.footer-soc-link{
-    transition: var(--animation);
+.footer-text{
+    transition: color var(--animation);
 }
 
 
@@ -747,7 +751,7 @@ img {
 }
 
 .button-tipe{
-    transition: var(--animation);
+    transition: background-color var(--animation), color var(--animation);
 }
 
 
